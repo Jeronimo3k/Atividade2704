@@ -1,0 +1,25 @@
+<template>
+	<div class="container">
+		<h1>Cálculo de IMC</h1>
+		<div>
+			<label>Nome:</label>
+			<input type="text" value={nome} onchange={handleChangeNome} />
+		</div>
+		<div>
+			<label>Peso (kg):</label>
+			<input type="number" value={peso} onchange={handleChangePeso} />
+		</div>
+		<div>
+			<label>Altura (m):</label>
+			<input type="number" value={altura} onchange={handleChangeAltura} />
+		</div>
+		<div>
+			<lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick}
+				class="slds-m-left_x-small"></lightning-button>
+
+		</div>
+		<div if:true={imc}>
+			<p>O seu IMC é: {imc}</p>
+		</div>
+	</div>
+</template>
